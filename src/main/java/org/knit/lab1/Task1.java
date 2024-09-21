@@ -22,9 +22,9 @@ public class Task1 {
 
     public void execute() {
         for (int i = 0; i < 100; i += 10) {
-            String line = "1"
-            for (int j = 0; j < 10; j++) {
-                line = line +", " +j
+            String line = Integer.toString(i + 1);
+            for (int j = 1; j < 11; j++) {
+                line = line + ", " + Integer.toString(i + j);
             }
             System.out.println(line);
         }

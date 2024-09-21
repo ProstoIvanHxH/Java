@@ -24,6 +24,9 @@ public class Task2 {
 
         String urlValue = "https://test.ru/test/1072/page.jsp?intParam=12345&doubleParam=3.14&textParameter=someText";
 
+        SimpleUrl url= new SimpleUrl("https","test");
+        String ulo =url.toString();
+        System.out.println(ulo);
         /* tips
          * urlValue.split(":");
          */
