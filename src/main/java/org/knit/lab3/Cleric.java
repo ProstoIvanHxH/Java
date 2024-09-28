@@ -1,16 +1,16 @@
 package org.knit.lab3;
 
-public class Mage extends Player implements Caster,Movement {
-    public Mage(String name) {
+public class Cleric extends Player implements Healer,Movement{
+    public Cleric(String name){
         setName(name);
-        setDef(0);
-        setHealth(100);
-        setMana(10);
-        setMagicpower(30);
-        setMaxHealth(100);
-        setStenght(3);
-    }
+        setDef(3);
+        setHealth(200);
+        setMana(5);
+        setMagicpower(20);
+        setMaxHealth(200);
+        setStenght(7);
 
+    }
     @Override
     protected void increaseHealth(double value) {
         setHealth(Math.min(getMaxHealth(),getHealth()+value));
@@ -25,13 +25,11 @@ public class Mage extends Player implements Caster,Movement {
             setHealth(Math.min(getHealth(), getHealth() + getDef() - value));
         }
     }
-
-    public void castspell(Player player) {
-        player.decreaseHealth(getMagicpower()+player.getDef());
+    public void heal(Player player){
+        player.increaseHealth(getMagicpower());
     }
     public void walk(int x, int y){
         setXcord(x);
         setYcord(y);
     }
-
 }

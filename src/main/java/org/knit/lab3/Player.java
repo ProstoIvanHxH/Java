@@ -4,13 +4,22 @@ public abstract class Player {
     private double health;
     private String name;
     private double mana;
-    private double max_health;
+    private double maxHealth;
     private boolean isAlive = true;
     private int xcord;
     private int ycord;
     private int def;
     private int stenght;
     private int magicpower;
+    private String subclass;
+
+    public String getSubclass() {
+        return subclass;
+    }
+
+    public void setSubclass(String subclass) {
+        this.subclass = subclass;
+    }
 
     public int getStenght() {
         return stenght;
@@ -77,12 +86,12 @@ public abstract class Player {
         this.mana = mana;
     }
 
-    public double getMax_health() {
-        return max_health;
+    public double getMaxHealth() {
+        return maxHealth;
     }
 
-    public void setMax_health(double max_health) {
-        this.max_health = max_health;
+    public void setMaxHealth(double maxHealth) {
+        this.maxHealth = maxHealth;
     }
 
     public int getXcord() {
@@ -92,6 +101,6 @@ public abstract class Player {
     public void setXcord(int xcord) {
         this.xcord = xcord;
     }
-    protected abstract double increaseHealth(double value);
+    protected abstract void increaseHealth(double value);
     protected abstract void decreaseHealth(double value);
 }
