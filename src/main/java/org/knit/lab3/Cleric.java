@@ -1,7 +1,7 @@
 package org.knit.lab3;
 
-public class Cleric extends Player implements Healer,Movement{
-    public Cleric(String name){
+public class Cleric extends Player implements Healer, Movement {
+    public Cleric(String name) {
         setName(name);
         setDef(3);
         setHealth(200);
@@ -11,9 +11,10 @@ public class Cleric extends Player implements Healer,Movement{
         setStenght(7);
 
     }
+
     @Override
     protected void increaseHealth(double value) {
-        setHealth(Math.min(getMaxHealth(),getHealth()+value));
+        setHealth(Math.min(getMaxHealth(), getHealth() + value));
     }
 
     @Override
@@ -25,10 +26,12 @@ public class Cleric extends Player implements Healer,Movement{
             setHealth(Math.min(getHealth(), getHealth() + getDef() - value));
         }
     }
-    public void heal(Player player){
+
+    public void heal(Player player) {
         player.increaseHealth(getMagicpower());
     }
-    public void walk(int x, int y){
+
+    public void walk(int x, int y) {
         setXcord(x);
         setYcord(y);
     }
