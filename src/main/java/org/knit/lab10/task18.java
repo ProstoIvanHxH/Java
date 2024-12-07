@@ -1,8 +1,6 @@
 package org.knit.lab10;
 
-import java.util.*;
-
-public class Main {
+public class task18 {
 
     public static void main(String[] args) {
         Pair<String, Integer> pair = new Pair<>("Age", 30);
