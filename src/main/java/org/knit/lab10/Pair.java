@@ -10,13 +10,14 @@ public class Pair {
 
     private Map.Entry entry;
 
-    public Pair (Object x, Object y) {
-        Set<Map.Entry> entries = new HashSet<>();
-        entries.add(Pair.of(x, y));
-        Object[] setArray = entries.toArray();
-        this.entry = (Map.Entry) setArray[0];
-    }
-
-    pu
-    }
+//    public Pair (Object x, Object y) {
+//        Set<Map.Entry> entries = new HashSet<>();
+//        entries.add(Pair.of(x, y));
+//        Object[] setArray = entries.toArray();
+//        this.entry = (Map.Entry) setArray[0];
+//        System.out.println();
+//        short;;
+//
+//    pu
+//    }
 }
