@@ -1,12 +1,8 @@
 package org.knit.lab8;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import java.io.Serializable;
 
-public class User implements Serializable {
+class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
@@ -19,8 +15,23 @@ public class User implements Serializable {
         this.email = email;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+
     @Override
     public String toString() {
         return "Имя: " + name + ", Возраст: " + age + ", Email: " + email;
     }
+
+
 }
