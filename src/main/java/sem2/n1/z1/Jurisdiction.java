@@ -1,6 +1,4 @@
-package sem2.n2.z1;
-
-import java.io.Console;
+package sem2.n1.z1;
 
 class Jurisdiction extends Manager {
 

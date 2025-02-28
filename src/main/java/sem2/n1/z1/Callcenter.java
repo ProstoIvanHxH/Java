@@ -1,4 +1,4 @@
-package sem2.n2.z1;
+package sem2.n1.z1;
 
 // Конкретные обработчики
 class Callcenter extends Manager {
