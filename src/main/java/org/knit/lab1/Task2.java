@@ -23,9 +23,14 @@ public class Task2 {
     public void execute() {
 
         String urlValue = "https://test.ru/test/1072/page.jsp?intParam=12345&doubleParam=3.14&textParameter=someText";
+        String[] test = urlValue.split("/");
+//        for (int i = 0; i < test.length; i++) {
+//            System.out.println(test[i]);
+//        }
+        String webpa = test[5].substring(0,test[5].indexOf("?"));
 
-        SimpleUrl url= new SimpleUrl("https","test");
-        String ulo =url.toString();
+        SimpleUrl url = new SimpleUrl(test[0].substring(0, test[0].length() - 1), test[2], test[2].substring(test[2].indexOf(".") + 1, test[2].length()), test[3], webpa, webpa.substring(webpa.indexOf(".")+1,webpa.length()));
+        String ulo = url.toString();
         System.out.println(ulo);
         /* tips
          * urlValue.split(":");
