@@ -5,7 +5,7 @@ public class Memento {
     public Memento(String text){
         this.text=text;
     }
-    public String getSavedText(){
+    public String getText(){
         return text;
     }
 }

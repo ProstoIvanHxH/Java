@@ -4,33 +4,20 @@ public class TextEditor {
 
     private String text;
 
-    public TextEditor() {
-        this.text = "";
+    public TextEditor(String s) {
+        this.text =s;
     }
-
-    public void setText(String text) {
-        this.text = text;
+    public void Write(String s){
+        text=text+'\n'+s;
+        System.out.println(text);
     }
-
-    public void addText(String text) {
-        this.text = this.text + '\n' + text;
-    }
-
-    public String getText() {
+    public String read(){
         return text;
     }
-
-    public Memento saveStaate() {
+    public Memento save(){
         return new Memento(text);
     }
-
-    public void restoreState(Memento memento) {
-        this.text = memento.getSavedText();
-
-    }
-
-    @Override
-    public String toString() {
-        return text;
+    public void restore(Memento memento){
+        this.text=memento.getText();
     }
 }

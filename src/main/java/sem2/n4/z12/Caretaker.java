@@ -5,15 +5,16 @@ import java.util.Stack;
 public class Caretaker {
     private final Stack<Memento> history = new Stack<>();
 
-    public void saveState(Memento memento) {
-        history.push(memento);
+    public void saveState(TextEditor textEditor) {
+        history.push(textEditor.save());
     }
 
-    public Memento undo() {
-        if (history.isEmpty()) {
-            return null;
+    public void load(TextEditor textEditor) {
+        if (!history.isEmpty()) {
+            textEditor.restore(history.pop());
+            System.out.println("loaded");
         } else {
-            return history.pop();
+            System.out.println("no saves");
         }
     }
 }
